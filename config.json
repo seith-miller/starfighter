@@ -1,9 +1,0 @@
-{
-    "db":{
-        "user":"code_user",
-        "password":"my_password",
-        "host":"localhost",
-        "port":"5432",
-        "name":"template1"
-    }
-}
