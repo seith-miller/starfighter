@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 
 from starfighter.simple_page import simple_page
 from starfighter import data_access
+from starfighter import models
 
 
 app = Flask(__name__)
@@ -15,7 +16,7 @@ def render_page():
     my_title = "Show me the databases:"
 
     my_text = ""
-    for row in data_access.read_rows():
+    for row in models.read_rows():
         my_text += row[0] + "<br/>"
 
     my_html = my_title + "<br/>" + my_text
