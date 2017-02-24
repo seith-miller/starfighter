@@ -4,15 +4,14 @@
 import json
 import psycopg2
 
+from instance import config
+
 
 def read_rows():
-    with open('config.json') as json_data_file:
-        config_data = json.load(json_data_file)
-
-    db_user = config_data['db']['user']
-    db_password = config_data['db']['password']
-    db_name = config_data['db']['name']
-    db_host = config_data['db']['host']
+    db_user = config.user
+    db_password = config.password
+    db_name = config.name
+    db_host = config.host
 
     conn = psycopg2.connect(dbname=db_name, user=db_user, host=db_host, password=db_password)
 
