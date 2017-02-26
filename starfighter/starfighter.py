@@ -4,7 +4,6 @@ import io
 import matplotlib.pyplot as plt
 
 from starfighter.simple_page import simple_page
-from starfighter import data_access
 from starfighter import models
 
 
