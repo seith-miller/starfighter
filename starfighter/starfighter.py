@@ -1,4 +1,5 @@
-from flask import Flask, render_template, redirect, url_for, request, session, make_response, flash
+from flask import Flask, render_template, redirect, url_for
+from flask import request, session, make_response, flash
 import io
 import matplotlib.pyplot as plt
 from functools import wraps
@@ -10,6 +11,7 @@ from starfighter import models
 app = Flask(__name__)
 app.register_blueprint(simple_page)
 app.secret_key = 'fake_key'
+
 
 def login_required(f):
     @wraps(f)
