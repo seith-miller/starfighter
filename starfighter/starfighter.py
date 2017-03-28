@@ -47,7 +47,7 @@ def login():
 def logout():
     session.pop('logged_in', None)
     flash('You were logged out.')
-    return redirect(url_for('welcome'))
+    return redirect(url_for('login'))
 
 
 @app.route("/")
@@ -69,11 +69,13 @@ def render_page():
 
 
 @app.route("/db")
+@login_required
 def db_page():
     return render_page()
 
 
 @app.route("/map")
+@login_required
 def simple():
 
     output = io.BytesIO()
